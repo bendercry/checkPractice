@@ -11,8 +11,6 @@ import UIKit
     @objc optional func checkListTap()
 }
 
-
-
 class NavigationBar: UIView{
     weak var delegate: NavigationBarDelegate?
     

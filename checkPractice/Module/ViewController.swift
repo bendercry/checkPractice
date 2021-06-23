@@ -12,8 +12,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customNavigationBar: NavigationBar!
-    var firstTable: UITableView?
-    var secondTable: UITableView?
+    
     var flag = false
     let images: [UIImage] = [ #imageLiteral(resourceName: "newsletter"),
                               #imageLiteral(resourceName: "notification"),
@@ -36,12 +35,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstTable = tableView
         tableView.delegate = self
         tableView.dataSource = self
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         customNavigationBar.delegate = self
-        
     }
 }
 
