@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBar" customModule="checkPractice" customModuleProvider="target">
+            <connections>
+                <outlet property="checkListButton" destination="Tko-MJ-Twk" id="Gwa-xf-G79"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="IGu-2G-Cce"/>
+                <outlet property="listButton" destination="giy-m3-Zro" id="xa9-ou-Phw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lby-K5-cGL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="zjK-pG-isK">
+                            <rect key="frame" x="106" y="9" width="202" height="79.5"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GWT-1O-wu0">
+                            <rect key="frame" x="332" y="54" width="72" height="32"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giy-m3-Zro">
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="7Uo-Dg-3pd"/>
+                                        <constraint firstAttribute="height" constant="32" id="FFv-JU-vB6"/>
+                                    </constraints>
+                                    <state key="normal" image="list"/>
+                                    <connections>
+                                        <action selector="listTap:" destination="-1" eventType="touchUpInside" id="qX4-ef-MIG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tko-MJ-Twk">
+                                    <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="2BI-UI-rDc"/>
+                                        <constraint firstAttribute="height" constant="32" id="6Wf-nh-JUQ"/>
+                                    </constraints>
+                                    <state key="normal" image="checkList"/>
+                                    <connections>
+                                        <action selector="checkListTap:" destination="-1" eventType="touchUpInside" id="TIR-fG-ARM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="zjK-pG-isK" firstAttribute="top" secondItem="lby-K5-cGL" secondAttribute="top" constant="9" id="4cd-bY-88i"/>
+                        <constraint firstAttribute="trailing" secondItem="GWT-1O-wu0" secondAttribute="trailing" constant="10" id="UHn-xq-exx"/>
+                        <constraint firstItem="zjK-pG-isK" firstAttribute="centerX" secondItem="lby-K5-cGL" secondAttribute="centerX" id="UtF-bf-pXr"/>
+                        <constraint firstAttribute="bottom" secondItem="GWT-1O-wu0" secondAttribute="bottom" constant="10" id="VCJ-He-fEZ"/>
+                        <constraint firstAttribute="bottom" secondItem="zjK-pG-isK" secondAttribute="bottom" constant="7.5" id="ctw-kT-48h"/>
+                        <constraint firstItem="zjK-pG-isK" firstAttribute="width" secondItem="lby-K5-cGL" secondAttribute="width" multiplier="0.487923" id="iz8-55-qDm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lby-K5-cGL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9Gf-fD-ZmF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lby-K5-cGL" secondAttribute="trailing" id="F62-3X-AJb"/>
+                <constraint firstItem="lby-K5-cGL" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Hit-Xy-ei2"/>
+                <constraint firstItem="lby-K5-cGL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PS3-vB-p2a"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.48660714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Title" width="202" height="84.5"/>
+        <image name="checkList" width="32" height="32"/>
+        <image name="list" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
