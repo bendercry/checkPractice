@@ -12,9 +12,10 @@
 		8030D3532681D9130059F7CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8030D3522681D9130059F7CA /* ViewController.swift */; };
 		8030D3582681D9140059F7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8030D3572681D9140059F7CA /* Assets.xcassets */; };
 		8030D35B2681D9140059F7CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8030D3592681D9140059F7CA /* LaunchScreen.storyboard */; };
-		8030D3642681DC520059F7CA /* FirstViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8030D3632681DC520059F7CA /* FirstViewCell.swift */; };
 		8030D3692681FCD90059F7CA /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8030D3682681FCD90059F7CA /* NavigationBar.xib */; };
 		8030D36B268200560059F7CA /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8030D36A268200560059F7CA /* NavigationBar.swift */; };
+		8040876D2684B23500350E65 /* FirstViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040876C2684B23500350E65 /* FirstViewCell.swift */; };
+		8040876F2684B24100350E65 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8040876E2684B24100350E65 /* HeaderView.xib */; };
 		80C63721268339B400D23A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8030D3552681D9130059F7CA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -27,9 +28,10 @@
 		8030D3572681D9140059F7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8030D35A2681D9140059F7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8030D35C2681D9140059F7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8030D3632681DC520059F7CA /* FirstViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewCell.swift; sourceTree = "<group>"; };
 		8030D3682681FCD90059F7CA /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		8030D36A268200560059F7CA /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		8040876C2684B23500350E65 /* FirstViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewCell.swift; path = HeaderView/FirstViewCell.swift; sourceTree = "<group>"; };
+		8040876E2684B24100350E65 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = HeaderView/HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +77,10 @@
 		8030D3622681DC340059F7CA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				8040876E2684B24100350E65 /* HeaderView.xib */,
+				8040876C2684B23500350E65 /* FirstViewCell.swift */,
 				80C6371C2683217200D23A9A /* NavigationBar */,
 				8030D3522681D9130059F7CA /* ViewController.swift */,
-				8030D3632681DC520059F7CA /* FirstViewCell.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8030D3692681FCD90059F7CA /* NavigationBar.xib in Resources */,
+				8040876F2684B24100350E65 /* HeaderView.xib in Resources */,
 				8030D35B2681D9140059F7CA /* LaunchScreen.storyboard in Resources */,
 				8030D3582681D9140059F7CA /* Assets.xcassets in Resources */,
 				80C63721268339B400D23A9A /* Main.storyboard in Resources */,
@@ -173,7 +177,7 @@
 			files = (
 				8030D36B268200560059F7CA /* NavigationBar.swift in Sources */,
 				8030D3532681D9130059F7CA /* ViewController.swift in Sources */,
-				8030D3642681DC520059F7CA /* FirstViewCell.swift in Sources */,
+				8040876D2684B23500350E65 /* FirstViewCell.swift in Sources */,
 				8030D34F2681D9130059F7CA /* AppDelegate.swift in Sources */,
 				8030D3512681D9130059F7CA /* SceneDelegate.swift in Sources */,
 			);

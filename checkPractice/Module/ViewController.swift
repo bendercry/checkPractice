@@ -16,11 +16,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewD
     var flag = false
     let images: [UIImage] = [ #imageLiteral(resourceName: "newsletter"),
                               #imageLiteral(resourceName: "notification"),
-                              #imageLiteral(resourceName: "activationCode")
+                              #imageLiteral(resourceName: "activationCode"),
+                              #imageLiteral(resourceName: "allNotifications")
     ]
     let sectionsTitles = ["Newsletter",
                           "Notifications",
-                          "Activation code"
+                          "Activation code",
     ]
     var example = [
         "afahgfsi af aih fhi ashk fsbaih ihfb abosi bfohb abhsf abkf blab jlf beo b",
@@ -48,27 +49,16 @@ extension ViewController{
         return example.count
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.lightGray
+        let headerView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! FirstViewCell
         if(flag){
-        
-        let image = UIImageView(image: images[section])
-        image.frame = CGRect(x: 5, y: 5, width: 35, height: 35)
-        view.addSubview(image)
-        
-        let label = UILabel()
-        label.text = sectionsTitles[section]
-        label.frame = CGRect(x: 45, y: 5, width: 150, height: 35)
-        view.addSubview(label)
-        
+                headerView.headerImage.image = images[section]
+                    headerView.headerTitle.text = sectionsTitles[section]
         }
         else {
-            let label = UILabel()
-            label.text = "All notifications"
-            label.frame = CGRect(x: 5, y: 5, width: 150, height: 35)
-            view.addSubview(label)
-        }
-        return view
+                headerView.headerImage.image = images[3]
+                headerView.headerTitle.text = "All notifications"
+            }
+        return headerView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FirstViewCell
@@ -96,20 +86,5 @@ extension ViewController{
         flag = true
         tableView.reloadData()
     }
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-
-        if(velocity.y>0) {
-            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-                self.navigationController?.setToolbarHidden(true, animated: true)
-            }, completion: nil)
-
-        } else {
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                self.navigationController?.setToolbarHidden(false, animated: true)
-            }, completion: nil)
-          }
-       }
+   
 }
