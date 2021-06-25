@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource, NavigationBarDelegate{
     
@@ -13,6 +15,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customNavigationBar: NavigationBar!
     
+    var forecastArray:[Weather] = [Weather]()
     var flag = false
     let images: [UIImage] = [ #imageLiteral(resourceName: "newsletter"),
                               #imageLiteral(resourceName: "notification"),
@@ -40,6 +43,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewD
         tableView.dataSource = self
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         customNavigationBar.delegate = self
+        fetchWeather()
     }
 }
 
@@ -86,5 +90,51 @@ extension ViewController{
         flag = true
         tableView.reloadData()
     }
-   
+    
+}
+//MARK: Extenstion for HTTPRequests
+extension ViewController{
+    func fetchWeather(){
+        let headers:HTTPHeaders = [
+            "key":"c1a4b9e2e18f4eab90d83758212506",
+        ]
+        let params:[String:Any] = [
+            "q":"Izhevsk",
+            "days":3
+        ]
+        let request = AF.request("https://api.weatherapi.com/v1/forecast.json",parameters: params, headers: headers).responseJSON{ response in
+            
+            switch response.result{
+            case .success(let value):
+                let json = JSON(value)
+               // print(json)
+                let dates = json["forecast"]["forecastday"].arrayValue.map{$0["date"].stringValue}
+                    
+                let maxTemps = json["forecast"]["forecastday"].arrayValue.map{$0["day"]["maxtemp_c"].doubleValue}
+                
+                let minTemps = json["forecast"]["forecastday"].arrayValue.map{$0["day"]["mintemp_c"].doubleValue}
+                let avgTemps = json["forecast"]["forecastday"].arrayValue.map{$0["day"]["avgtemp_c"].doubleValue}
+               
+                for i in 0..<dates.count{
+                    let tmp:Weather = Weather(date: dates[i], maxTemp: maxTemps[i], minTemp: minTemps[i], avgTemp: avgTemps[i])
+                    forecastArray.append(tmp)
+                    print(forecastArray[i])
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}
+struct Weather {
+    var date:String = ""
+    var maxTemp:Double = 0.0
+    var minTemp:Double = 0.0
+    var avgTemp:Double = 0.0
+    init(date: String, maxTemp: Double, minTemp: Double, avgTemp: Double){
+        self.date = date
+        self.maxTemp = maxTemp
+        self.minTemp = minTemp
+        self.avgTemp = avgTemp
+    }
 }

@@ -61,10 +61,10 @@
                                 <viewLayoutGuide key="safeArea" id="TrX-vV-7YX"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="TrX-vV-7YX" firstAttribute="trailing" secondItem="1Ia-Gt-Pnb" secondAttribute="trailing" id="ZYg-3U-ADd"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Ia-Gt-Pnb" secondAttribute="trailing" id="ZYg-3U-ADd"/>
                                     <constraint firstItem="1Ia-Gt-Pnb" firstAttribute="bottom" secondItem="TrX-vV-7YX" secondAttribute="bottom" id="eLF-lW-Nen"/>
                                     <constraint firstItem="1Ia-Gt-Pnb" firstAttribute="leading" secondItem="TrX-vV-7YX" secondAttribute="leading" id="fXW-M9-Zil"/>
-                                    <constraint firstItem="1Ia-Gt-Pnb" firstAttribute="top" secondItem="TrX-vV-7YX" secondAttribute="top" id="i8P-92-djk"/>
+                                    <constraint firstItem="1Ia-Gt-Pnb" firstAttribute="top" secondItem="t38-ch-qm9" secondAttribute="top" id="i8P-92-djk"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0is-dd-MvG">
@@ -124,12 +124,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sGN-13-h8V" firstAttribute="trailing" secondItem="t38-ch-qm9" secondAttribute="trailing" id="7fq-a4-oIT"/>
-                            <constraint firstItem="sGN-13-h8V" firstAttribute="trailing" secondItem="0is-dd-MvG" secondAttribute="trailing" id="F4M-b6-7Sf"/>
+                            <constraint firstAttribute="trailing" secondItem="0is-dd-MvG" secondAttribute="trailing" id="F4M-b6-7Sf"/>
                             <constraint firstItem="0is-dd-MvG" firstAttribute="top" secondItem="t38-ch-qm9" secondAttribute="bottom" constant="8" symbolic="YES" id="PXT-Sj-EhO"/>
                             <constraint firstItem="t38-ch-qm9" firstAttribute="top" secondItem="sGN-13-h8V" secondAttribute="top" id="RSO-mr-Qhe"/>
-                            <constraint firstItem="0is-dd-MvG" firstAttribute="bottom" secondItem="sGN-13-h8V" secondAttribute="bottom" constant="34" id="WLQ-Fb-rV9"/>
+                            <constraint firstItem="0is-dd-MvG" firstAttribute="bottom" secondItem="cyH-KI-O35" secondAttribute="bottom" id="WLQ-Fb-rV9"/>
                             <constraint firstItem="t38-ch-qm9" firstAttribute="leading" secondItem="sGN-13-h8V" secondAttribute="leading" id="lgQ-hP-oeQ"/>
-                            <constraint firstItem="0is-dd-MvG" firstAttribute="leading" secondItem="sGN-13-h8V" secondAttribute="leading" id="m18-jZ-agf"/>
+                            <constraint firstItem="0is-dd-MvG" firstAttribute="leading" secondItem="cyH-KI-O35" secondAttribute="leading" id="m18-jZ-agf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oiN-gC-7ik"/>
