@@ -9,13 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-struct Headline {
-    var id : Int
-    var date : Date
-    var title : String
-    var text : String
-    var image : String
-}
+
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource, NavigationBarDelegate{
     
