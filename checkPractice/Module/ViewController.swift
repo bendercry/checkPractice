@@ -120,6 +120,7 @@ extension ViewController{
                 let maxTemps = json["forecast"]["forecastday"].arrayValue.map{$0["day"]["maxtemp_c"].doubleValue}
                 let minTemps = json["forecast"]["forecastday"].arrayValue.map{$0["day"]["mintemp_c"].doubleValue}
                 let avgTemps = json["forecast"]["forecastday"].arrayValue.map{$0["day"]["avgtemp_c"].doubleValue}
+                
                 let city = json["location"]["name"].stringValue
                 
                 for i in 0..<dates.count{
