@@ -1,0 +1,6 @@
+framework module Pods_checkPractice {
+  umbrella header "Pods-checkPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}
